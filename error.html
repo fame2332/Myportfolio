@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 304 - Richmond Constante Design</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Error page specific styles */
+        .error-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            background-color: #000;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .error-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        
+        .error-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: 1;
+        }
+        
+        .error-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+        
+        .error-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 4rem;
+            letter-spacing: 1px;
+        }
+        
+        .error-code {
+            font-size: 10rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ff3366, #ff9933);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .error-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .error-message {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+            opacity: 0.8;
+        }
+        
+        .error-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #fff;
+            color: #000;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .error-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .error-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        .error-shape {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff3366, #ff9933);
+            opacity: 0.2;
+            filter: blur(50px);
+        }
+        
+        .shape-1 {
+            width: 300px;
+            height: 300px;
+            top: 20%;
+            left: 10%;
+        }
+        
+        .shape-2 {
+            width: 200px;
+            height: 200px;
+            bottom: 10%;
+            right: 20%;
+        }
+        
+        .shape-3 {
+            width: 150px;
+            height: 150px;
+            top: 50%;
+            right: 10%;
+        }
+        
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 6rem;
+            }
+            
+            .error-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-background">
+            <div class="error-grid"></div>
+            <div class="error-shapes">
+                <div class="error-shape shape-1"></div>
+                <div class="error-shape shape-2"></div>
+                <div class="error-shape shape-3"></div>
+            </div>
+        </div>
+        
+        <div class="error-content">
+            <div class="error-logo">RichmondConstanteDesign</div>
+            <h1 class="error-code">304</h1>
+            <h2 class="error-title">Page Not Modified</h2>
+            <p class="error-message">
+                The page you're looking for hasn't been modified since your last visit. 
+                This might be due to cached content or server configuration.
+                Please try refreshing your browser or clearing your cache.
+            </p>
+            <a href="index.html" class="error-button">Return to Homepage</a>
+        </div>
+    </div>
+    
+    <script>
+        // Add some animation to the shapes
+        document.addEventListener('DOMContentLoaded', function() {
+            const shapes = document.querySelectorAll('.error-shape');
+            
+            shapes.forEach(shape => {
+                // Random initial position
+                const x = Math.random() * 10 - 5;
+                const y = Math.random() * 10 - 5;
+                
+                // Apply animation
+                shape.style.animation = `float ${5 + Math.random() * 5}s ease-in-out infinite`;
+                shape.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        });
+        
+        // Add floating animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float {
+                0% { transform: translate(0, 0); }
+                50% { transform: translate(15px, -15px); }
+                100% { transform: translate(0, 0); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
