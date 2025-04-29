@@ -11,10 +11,15 @@
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.87/build/spline-viewer.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Black box favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64'><rect width='64' height='64' fill='black'/></svg>">
 </head>
-<body>
+<body class="loading">
+    <div class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-progress"></div>
+            <div class="loading-percentage">0%</div>
+        </div>
+    </div>
     <div class="gradient-overlay"></div>
     
     <header>
@@ -44,7 +49,6 @@
                 </h1>
             </div>
             <div class="spline-container">
-                <!-- Spline viewer with the correct URL -->
                 <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.87/build/spline-viewer.js"></script> 
                 <spline-viewer url="https://prod.spline.design/WxYhIytZcUFVj6Qi/scene.splinecode"></spline-viewer>
             </div>
@@ -56,7 +60,6 @@
             <h2 class="section-title">Featured work</h2>
             
             <div class="featured-projects">
-                <!-- Project 1 - Wagamama redesign -->
                 <div class="featured-project" data-aos="fade-up">
                     <div class="project-image">
                         <img src="assets/Automata.png" alt="Automata Visualizer" class="project-img">
@@ -73,7 +76,6 @@
                     </div>
                 </div>
                 
-                <!-- Project 2 -->
                 <div class="featured-project right-aligned" data-aos="fade-up">
                     <div class="project-image">
                         <img src="assets/Smartwater.png" alt="Project 2" class="project-img">
@@ -88,7 +90,6 @@
                     </div>
                 </div>
                 
-                <!-- Project 3 -->
                 <div class="featured-project" data-aos="fade-up">
                     <div class="project-image">
                         <img src="assets/racerph.png" alt="Racer PH Guild Website" class="project-img">
@@ -103,7 +104,6 @@
                     </div>
                 </div>
                 
-                <!-- Project 4 -->
                 <div class="featured-project right-aligned" data-aos="fade-up">
                     <div class="project-image">
                         <img src="assets/Textsafe.png" alt="Project 4" class="project-img">
@@ -123,10 +123,8 @@
         </div>
     </section>
 
-    <!-- After your main section and before the projects section -->
     <section id="about" class="about-section">
         <div class="floating-boxes">
-            <!-- Add multiple white boxes that will animate -->
             <div class="box box-1"></div>
             <div class="box box-2"></div>
             <div class="box box-3"></div>
@@ -159,14 +157,10 @@
         scroll <span class="arrow">↓</span>
     </div>
 
-    <!-- Add this before the closing body tag -->
     <div class="section-transition"></div>
     
-    <!-- Your existing scripts -->
     <script src="script.js"></script>
     <script src="projects.js"></script>
-    <!-- Add this after your about section -->
-    <!-- Profile Section -->
     <section id="profile" class="profile-section">
         <div class="profile-container">
             <div class="profile-label">PROFILE</div>
@@ -190,8 +184,6 @@
             <div class="profile-dot"></div>
         </div>
     </section>
-    <!-- Add this after your profile section -->
-    <!-- Skills Section -->
     <section id="skills" class="skills-section">
         <div class="skills-container">
             <div class="skills-header">
@@ -207,44 +199,36 @@
             </div>
             
             <div class="skills-grid">
-                <!-- Skill 1 -->
                 <div class="skill-item" data-index="01">
                     <div class="skill-title">Front End</div>
                 </div>
                 
-                <!-- Skill 2 -->
                 <div class="skill-item" data-index="02">
                     <div class="skill-title">Backend</div>
                 </div>
                 
-                <!-- Skill 3 -->
                 <div class="skill-item" data-index="03">
                     <div class="skill-title">Database</div>
                 </div>
                 
-                <!-- Skill 4 -->
                 <div class="skill-item" data-index="04">
                     <div class="skill-title">Machine Learning</div>
                 </div>
                 
-                <!-- Skill 5 - Python -->
                 <div class="skill-item" data-index="05">
                     <div class="skill-title">Python</div>
                 </div>
                 
-                <!-- Skill 6 - Java -->
                 <div class="skill-item" data-index="06">
                     <div class="skill-title">Java</div>
                 </div>
             </div>
         </div>
     </section>
-<!-- Contact Section -->
 <section id="contact" class="contact-section">
     <div class="contact-container">
         <div class="contact-content">
             <div class="contact-visual">
-                <!-- Spline 3D element -->
                 <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.87/build/spline-viewer.js"></script>
                 <spline-viewer url="https://prod.spline.design/cIS8BCjuMNdLqU7y/scene.splinecode"></spline-viewer>
                 <h2 class="contact-headline">Contact</h2>
